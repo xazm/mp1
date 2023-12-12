@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/invoice.css" />
+
+    <title>Invoice</title>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <a href="homepage.html"><h1 class="logo">LOGO</h1></a>
+        <nav class="nav">
+          <a href="https://xmartfinds.co" class="About">About</a>
+
+          <a href="index.html" class="logout">Log out</a>
+        </nav>
+      </header>
+    </section>
+    <section class="mainContainer">
+      <main class="container">
+        <section class="containerMenu">
+          <nav class="navMenu">
+            <a href="homepage.html" class="navigatorMenu">Dashboad</a>
+            <div class="line"></div>
+            <a href="invoice.html" class="navigatorMenu">Invoice</a>
+            <div class="line"></div>
+            <a href="#" class="navigatorMenu">Inventory</a>
+            <div class="line"></div>
+            <a href="#" class="navigatorMenu">Quatation</a>
+            <div class="line"></div>
+            <a href="#" class="navigatorMenu">Settings</a>
+            <div class="line"></div>
+          </nav>
+        </section>
+        <section class="invoiceDashboard">
+          <div class="invoiceContainer">
+            <div class="invoiceHeader">
+              <div class="invoiceLogo">LOGO</div>
+              <div>
+                <h2>M Autoshop & Accessories</h2>
+                <p>Address</p>
+                <p>090909090</p>
+              </div>
+              <p>Invoice No.: INV123</p>
+            </div>
+
+            <div class="invoiceDetails">
+              <div class="invoiceNameAdd">
+                <label>Customer:<input type="text" /></label>
+
+                <label>Address:<input type="text" /></label>
+              </div>
+              <div>
+                <p>Date: 2023-01-01</p>
+              </div>
+            </div>
+
+            <table class="invoiceTable">
+              <thead>
+                <tr>
+                  <th>Quantity</th>
+                  <th>Unit</th>
+                  <th>Description</th>
+                  <th>Unit Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                </tr>
+
+                <tr>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="totalAmount">
+              <p>Total Amount: $35.00</p>
+            </div>
+
+            <div class="printButton">
+              <button onclick="window.print()">Print Invoice</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+    <footer>
+      <section class="myFooter">
+        <p>&copy; 2023 M Autoshop & Accessories. All rights reserved.</p>
+      </section>
+    </footer>
+  </body>
+</html>

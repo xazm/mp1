@@ -48,17 +48,13 @@ a {
   color: #dcf10d;
 }
 
-.container a:hover {
-  color: #dcf10d;
-}
-
-a:active {
-  color: #dcf10d;
-}
 /* main layout and style ContainerMenu */
 
 .container {
   display: flex;
+}
+.container a:hover {
+  color: #dcf10d;
 }
 
 .containerMenu {
@@ -98,31 +94,101 @@ a:active {
 
 /* dashboard container style and layout */
 
-.dashboard {
+.invoiceDashboard {
   background-color: #192140;
   opacity: 90%;
   margin: 20px 20px 20px 10px;
-  height: 500px;
-  width: 1000px;
+  height: auto;
+  width: 1200px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: auto;
+.invoiceContainer {
+  width: 90%;
+  margin: 20px auto;
   padding: 20px;
-  gap: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-.itemBoard {
-  background-color: #9d9db5;
-  width: 100%;
-  border-radius: 5px;
+.invoiceHeader {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-/* footer  */
+
+.invoiceLogo {
+  margin-right: 60px;
+}
+
+.invoiceDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.invoiceNameAdd {
+  display: flex;
+  flex-direction: column;
+}
+.invoiceTable {
+  height: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.totalAmount {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.printButton {
+  margin-top: 20px;
+  text-align: center;
+}
+/* media print */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .invoiceContainer,
+  .invoiceContainer * {
+    visibility: visible;
+  }
+  .invoiceContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  input {
+    border: none;
+  }
+  .printButton {
+    display: none;
+  }
+}
+
+/* Footer styles */
+footer {
+  color: #fff;
+  text-align: center;
+
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
 .myFooter {
   height: 70px;
   display: flex;
