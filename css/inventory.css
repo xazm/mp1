@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+/* this is for my header layout and style */
+
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #192140;
+}
+.logo {
+  color: #dcf10d;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2.4px;
+}
+.nav {
+  display: flex;
+  gap: 30px;
+  width: 300px;
+  justify-content: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.nav a:hover {
+  color: #dcf10d;
+}
+
+.container a:hover {
+  color: #dcf10d;
+}
+
+a:active {
+  color: #dcf10d;
+}
+/* main layout and style ContainerMenu */
+
+.container {
+  display: flex;
+}
+
+.containerMenu {
+  background-color: #192140;
+  opacity: 90%;
+  margin: 20px 10px 20px 20px;
+  height: 500px;
+  width: 250px;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navigatorMenu {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.16px;
+  margin: 20px 10px;
+  transition: color 0.3s;
+}
+
+.line {
+  margin-left: 100px;
+  width: 50px;
+  height: 1px;
+  background-color: #9d9db5;
+}
+
+/* dashboard container style and layout */
+
+.inventoryDashboard {
+  background-color: #192140;
+  margin: 20px 20px 20px 10px;
+  height: auto;
+  width: 1200px;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+}
+
+.inventoryCorner {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+h2 {
+  color: #00bcd4;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #009688;
+}
+
+#productList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#productList li {
+  background-color: #555;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#categoryList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#categoryList li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#productTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#productTable th,
+#productTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#productTable th {
+  background-color: #555;
+  color: #fff;
+}
+/* footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+} */
+
+/* footer  */
+.myFooter {
+  height: 70px;
+  display: flex;
+  color: #fff;
+  justify-content: space-around;
+  background-color: #192140;
+}

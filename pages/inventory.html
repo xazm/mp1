@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/inventory.css" />
+
+    <title>Invoice</title>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <a href="homepage.html"><h1 class="logo">LOGO</h1></a>
+        <nav class="nav">
+          <a href="https://xmartfinds.co" class="About">About</a>
+
+          <a href="index.html" class="logout">Log out</a>
+        </nav>
+      </header>
+    </section>
+    <section class="mainContainer">
+      <main class="container">
+        <section class="containerMenu">
+          <nav class="navMenu">
+            <a href="homepage.html" class="navigatorMenu">Dashboad</a>
+            <div class="line"></div>
+            <a href="invoice.html" class="navigatorMenu">Invoice</a>
+            <div class="line"></div>
+            <a href="inventory.html" class="navigatorMenu">Inventory</a>
+            <div class="line"></div>
+            <a href="#" class="navigatorMenu">Quatation</a>
+            <div class="line"></div>
+            <a href="#" class="navigatorMenu">Settings</a>
+            <div class="line"></div>
+          </nav>
+        </section>
+        <section class="inventoryDashboard">
+          <div class="dashboard">
+            <div class="inventoryCorner">
+              <h2>Inventory</h2>
+
+              <!-- Input fields for product details  -->
+              <label for="category">Category:</label>
+              <select id="category">
+                <option value="Brake Pads">Brake Pads</option>
+                <option value="Brake Shoe">Brake Shoe</option>
+                <option value="Oil Filter">Oil Filter</option>
+              </select>
+
+              <label for="productName">Product Name:</label>
+              <input type="text" id="productName" />
+
+              <label for="productPrice">Product Price:</label>
+              <input type="text" id="productPrice" />
+
+              <!-- Button to add products  -->
+              <button onclick="addProduct()">Add Product</button>
+
+              <!-- List of products  -->
+              <ul id="productList"></ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+    <footer>
+      <section class="myFooter">
+        <p>&copy; 2023 M Autoshop & Accessories. All rights reserved.</p>
+      </section>
+    </footer>
+    <script>
+      function addProduct() {
+        const category = document.getElementById("category").value;
+        const productName = document.getElementById("productName").value;
+        const productPrice = document.getElementById("productPrice").value;
+
+        if (!category || !productName || !productPrice) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        const productList = document.getElementById("productList");
+        const listItem = document.createElement("li");
+        listItem.textContent = `Category: ${category}, Product: ${productName}, Price: ${productPrice}`;
+        productList.appendChild(listItem);
+
+        // Clear input fields after adding a product
+        document.getElementById("productName").value = "";
+        document.getElementById("productPrice").value = "";
+      }
+    </script>
+  </body>
+</html>
