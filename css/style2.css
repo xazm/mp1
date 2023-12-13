@@ -1,18 +1,20 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #5d5d61;
+  font-family: "Inter", sans-serif;
 }
 
 .mainContainer {
   display: flex;
   justify-content: center;
 }
-/* this is for my header layout and style */
 
+/* Header layout and style */
 .header {
   height: 70px;
   display: flex;
@@ -20,6 +22,7 @@ body {
   justify-content: space-around;
   background-color: #192140;
 }
+
 .logo {
   color: #dcf10d;
   font-size: 50px;
@@ -27,10 +30,10 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   letter-spacing: 2.4px;
 }
+
 .nav {
   display: flex;
   gap: 30px;
-  width: 300px;
   justify-content: center;
 }
 
@@ -38,18 +41,16 @@ a {
   color: #fff;
   text-decoration: none;
   text-align: center;
-  font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 24px;
 }
+
 nav a:hover {
   color: #dcf10d;
 }
 
-/* main layout and style ContainerMenu */
-
+/* Main layout and style ContainerMenu */
 .container {
   display: flex;
 }
@@ -57,8 +58,6 @@ nav a:hover {
 .containerMenu {
   background-color: #192140;
   margin: 20px 10px 20px 20px;
-  height: 500px;
-  width: 250px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -66,33 +65,29 @@ nav a:hover {
 
 .navigatorMenu {
   color: #fff;
-  font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   line-height: 100%; /* 16px */
   letter-spacing: -0.16px;
   margin: 20px 10px;
   transition: color 0.3s;
 }
+
 .navBox {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+
 .navBox:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-/* dashboard container style and layout */
-
+/* Dashboard container style and layout */
 .dashboard {
   background-color: #192140;
-  opacity: 90%;
   margin: 20px 20px 20px 10px;
-  height: 500px;
-  width: 1200px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -100,11 +95,12 @@ nav a:hover {
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: auto;
   padding: 20px;
   gap: 15px;
 }
+
 .itemBox {
   background-color: #9d9db5;
   width: 90%;
@@ -117,9 +113,11 @@ nav a:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+
 .itemNumber {
   font-size: 50px;
 }
+
 .itemBoard {
   width: 100%;
   border-radius: 5px;
@@ -127,10 +125,12 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
 }
+
 .itemBoard p {
   color: #fff;
 }
-/* footer  */
+
+/* Footer */
 .myFooter {
   height: 100px;
   display: flex;
@@ -145,5 +145,85 @@ nav a:hover {
   color: #dcf10d;
 }
 
-@media screen {
+/* Burger menu styles */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-menu:checked + .containerMenu .navMenu {
+  display: flex;
+}
+
+.burger-menu:checked + .containerMenu .navBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #192140;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .navBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .navMenu {
+    flex-direction: column;
+  }
+
+  .navigatorMenu {
+    margin-bottom: 10px;
+  }
+
+  .containerMenu {
+    width: 100%;
+    margin: 0;
+  }
+
+  .dashboard {
+    width: 100%;
+    margin: 0;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    font-size: 40px;
+  }
+
+  .navigatorMenu {
+    font-size: 14px;
+  }
+
+  .itemNumber {
+    font-size: 40px;
+  }
 }

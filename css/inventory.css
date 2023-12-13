@@ -63,19 +63,12 @@ a:active {
 
 .containerMenu {
   background-color: #192140;
-  opacity: 90%;
   margin: 20px 10px 20px 20px;
   height: 500px;
   width: 250px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.navMenu {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .navigatorMenu {
@@ -89,12 +82,14 @@ a:active {
   margin: 20px 10px;
   transition: color 0.3s;
 }
-
-.line {
-  margin-left: 100px;
-  width: 50px;
-  height: 1px;
-  background-color: #9d9db5;
+.navBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.navBox:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 /* dashboard container style and layout */
@@ -140,7 +135,7 @@ input {
 }
 
 button {
-  background-color: #00bcd4;
+  background-color: #3498db;
   color: #fff;
   padding: 10px;
   border: none;
@@ -178,8 +173,9 @@ button:hover {
 }
 /* footer  */
 .myFooter {
-  height: 70px;
+  height: 100px;
   display: flex;
+  align-items: center;
   color: #fff;
   justify-content: space-around;
   background-color: #192140;
