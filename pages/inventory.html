@@ -36,8 +36,6 @@
           <div class="dashboard">
             <div class="inventoryCorner">
               <h2>Inventory</h2>
-
-              <!-- Input fields for product details  -->
               <label for="category">Category:</label>
               <select id="category">
                 <option value="Brake Pads">Brake Pads</option>
@@ -51,11 +49,34 @@
               <label for="productPrice">Product Price:</label>
               <input type="text" id="productPrice" />
 
-              <!-- Button to add products  -->
+              <!-- Button to add products -->
               <button onclick="addProduct()">Add Product</button>
 
-              <!-- List of products  -->
+              <!-- List of products -->
               <ul id="productList"></ul>
+
+              <table class="inventoryTable">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                  <!-- Sample Product -->
+                  <!-- <tr>
+                    <td>Brake Pads</td>
+                    <td>sdjs</td>
+                    <td>230.00</td>
+                  </tr>
+                  <tr>
+                    <td>Brake Pads</td>
+                    <td>Sample Product</td>
+                    <td>220.00</td>
+                  </tr> -->
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -77,10 +98,18 @@
           return;
         }
 
-        const productList = document.getElementById("productList");
-        const listItem = document.createElement("li");
-        listItem.textContent = `Category: ${category}, Product: ${productName}, Price: ${productPrice}`;
-        productList.appendChild(listItem);
+        // my input value to the table
+
+        const inventoryTableBody =
+          document.getElementById("inventoryTableBody");
+        const newRow = inventoryTableBody.insertRow();
+        const cellCategory = newRow.insertCell(0);
+        const cellProductName = newRow.insertCell(1);
+        const cellProductPrice = newRow.insertCell(2);
+
+        cellCategory.textContent = category;
+        cellProductName.textContent = productName;
+        cellProductPrice.textContent = `₱${productPrice}`;
 
         // Clear input fields after adding a product
         document.getElementById("productName").value = "";

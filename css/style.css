@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #5d5d61;
 }
 
 .mainContainer {
@@ -44,17 +44,11 @@ a {
   font-weight: 500;
   line-height: 24px;
 }
-.nav a:hover {
+nav a:hover {
   color: #dcf10d;
+  transition: 0.5s;
 }
 
-.container a:hover {
-  color: #dcf10d;
-}
-
-a:active {
-  color: #dcf10d;
-}
 /* main layout and style ContainerMenu */
 
 .container {
@@ -63,7 +57,6 @@ a:active {
 
 .containerMenu {
   background-color: #192140;
-  opacity: 90%;
   margin: 20px 10px 20px 20px;
   height: 500px;
   width: 250px;
@@ -116,11 +109,30 @@ a:active {
   padding: 20px;
   gap: 15px;
 }
-
-.itemBoard {
+.itemBox {
   background-color: #9d9db5;
+  width: 90%;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.itemBox:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.itemNumber {
+  font-size: 50px;
+}
+.itemBoard {
   width: 100%;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemBoard p {
+  color: #fff;
 }
 /* footer  */
 .myFooter {

@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #5d5d61;
 }
 
 .mainContainer {
@@ -111,7 +111,7 @@ a {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #fffdfd;
 }
 
 .invoiceHeader {
@@ -122,10 +122,12 @@ a {
 }
 
 .invoiceLogo {
+  font-size: 30px;
   margin-right: 60px;
 }
 
 .invoiceDetails {
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -136,6 +138,7 @@ a {
   flex-direction: column;
 }
 .invoiceTable {
+  font-size: 20px;
   height: auto;
   width: 100%;
   border-collapse: collapse;
