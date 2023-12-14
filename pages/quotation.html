@@ -59,7 +59,7 @@
                 <label>Address:<input type="text" /></label>
               </div>
               <div>
-                <p>Date: 2023-01-01</p>
+                <p>Date: <input type="date" /></p>
               </div>
             </div>
 
@@ -99,7 +99,7 @@
             </table>
 
             <div class="totalAmount">
-              <p>Total Amount: $35.00</p>
+              <p>Total Amount:</p>
             </div>
 
             <div class="printButton">
@@ -114,5 +114,35 @@
         <p>&copy; 2023 M Autoshop & Accessories. All rights reserved.</p>
       </section>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to calculate total amount
+        function calculateTotal() {
+          var rows = document.querySelectorAll(".invoiceTable tbody tr");
+          var total = 0;
+
+          rows.forEach(function (row) {
+            var quantity =
+              parseFloat(row.cells[0].querySelector("input").value) || 0;
+            var unitPrice =
+              parseFloat(row.cells[3].querySelector("input").value) || 0;
+            var rowTotal = quantity * unitPrice;
+            row.cells[4].querySelector("input").value = rowTotal.toFixed(2);
+            total += rowTotal;
+          });
+
+          document.querySelector(".totalAmount p").textContent =
+            "Total Amount: $" + total.toFixed(2);
+        }
+
+        // Attach event listeners to input fields
+        var inputFields = document.querySelectorAll(
+          ".invoiceTable tbody input[type='text']"
+        );
+        inputFields.forEach(function (input) {
+          input.addEventListener("input", calculateTotal);
+        });
+      });
+    </script>
   </body>
 </html>
