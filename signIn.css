@@ -1,0 +1,52 @@
+body {
+  font-family: "Gill Sans Extrabold", sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: #ffc107 !important;
+}
+
+.logo {
+  width: 120px !important;
+}
+.sign-in,
+.text-company {
+  margin-bottom: 0.5rem !important;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.form-control {
+  display: block !important;
+  width: 100% !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  background-clip: padding-box !important;
+  border: 1px solid #000 !important;
+  appearance: none !important;
+  border-radius: 5px !important;
+}
+.form-control:focus {
+  border-color: #ffc107b9 !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0.25rem #ffc10758 !important;
+}
+
+.form-check-input {
+  background-color: #000 !important;
+}
+.form-check-input:focus {
+  border-color: #ffc107b9 !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0.15rem #ffc10758 !important;
+}
+.form-check-input:checked {
+  background-color: #f4e30069 !important;
+}
+
+.btn:hover {
+  color: black !important;
+}
