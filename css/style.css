@@ -5,151 +5,151 @@
 }
 
 .mainContainer {
-  display: flex;
-  justify-content: center;
-  background-color: #5d5d61;
+  display: flex !important;
+  justify-content: center !important;
+  background-color: #5d5d61 !important;
 }
 /* this is for my header layout and style */
 
 .header {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #192140;
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important ;
+  background-color: #192140 !important;
 }
 
 .logo {
-  color: #dcf10d;
-  font-size: 50px;
-  font-weight: 700;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  letter-spacing: 2.4px;
+  color: #dcf10d !important;
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  letter-spacing: 2.4px !important;
 }
 .About,
 .logout {
-  color: #fff;
+  color: #fff !important;
 }
 
 .nav {
-  display: flex;
-  gap: 30px;
-  width: 300px;
-  justify-content: center;
+  display: flex !important;
+  gap: 30px !important;
+  width: 300px !important;
+  justify-content: center !important;
 }
 
 a {
-  color: #fff;
-  text-align: center;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
+  color: #fff !important;
+  text-align: center !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
 }
 nav a:hover {
-  color: #dcf10d;
+  color: #dcf10d !important;
 }
 
 /* main layout and style ContainerMenu */
 
 .container-sm {
-  display: flex;
+  display: flex !important;
 }
 
 .containerMenu {
-  background-color: #192140;
-  margin: 20px 10px 20px 20px;
-  height: 500px;
-  width: 250px;
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: #192140 !important;
+  margin: 20px 10px 20px 20px !important;
+  height: 500px !important;
+  width: 250px !important;
+  border-radius: 10px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .navigatorMenu {
-  color: #fff;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 100%; /* 16px */
-  letter-spacing: -0.16px;
-  margin: 20px 10px;
-  transition: color 0.3s;
-  text-decoration: none;
+  color: #fff !important;
+  font-family: Inter !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: 100% !important; /* 16px */
+  letter-spacing: -0.16px !important;
+  margin: 20px 10px !important;
+  transition: color 0.3s !important;
+  text-decoration: none !important;
 }
 .navBox {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column !important;
 }
 .navBox:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    rgba(0, 0, 0, 0.22) 0px 15px 12px !important;
 }
 
 /* dashboard container style and layout */
 
 .dashboard {
-  background-color: #192140;
-  opacity: 90%;
-  margin: 20px 20px 20px 10px;
-  height: 500px;
-  width: 1200px;
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: #192140 !important;
+  opacity: 90% !important;
+  margin: 20px 20px 20px 10px !important;
+  height: 500px !important;
+  width: 1200px !important;
+  border-radius: 10px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: auto;
-  padding: 20px;
-  gap: 15px;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: auto !important;
+  padding: 20px !important;
+  gap: 15px !important;
 }
 .itemBox {
-  background-color: #9d9db5;
-  width: 90%;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
+  background-color: #9d9db5 !important;
+  width: 90% !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+  cursor: pointer !important;
 }
 
 .itemBox:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    rgba(0, 0, 0, 0.22) 0px 15px 12px !important;
 }
 .itemNumber {
-  font-size: 50px;
+  font-size: 50px !important;
 }
 .itemBoard {
-  width: 100%;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100% !important;
+  border-radius: 5px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .itemBoard p {
-  color: #fff;
+  color: #fff !important;
 }
 .itemBoard h2 {
-  color: #fff;
+  color: #fff !important;
 }
 /* footer  */
 .myFooter {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  background-color: #192140;
-  gap: 5px;
+  height: 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  background-color: #192140 !important;
+  gap: 5px !important;
 }
 
 .myFooter div {
-  color: #dcf10d;
+  color: #dcf10d !important;
 }
 
 @media screen {
