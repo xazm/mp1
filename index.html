@@ -15,45 +15,53 @@
       rel="stylesheet"
     />
   </head>
-
-  <script>
-    function validateLogin() {
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-
-      // Check if the username and password match a predefined value
-      if (username === "user" && password === "password") {
-        alert("Login successful! Redirecting to the home page.");
-        // Redirect to the home page
-        window.location.href = "/homepage.html";
-      } else {
-        alert("Invalid username or password. Please try again.");
-      }
-
-      // Prevent the form from submitting
-      return false;
-    }
-  </script>
-</head>
-<body>
-  <div class="background">
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
-  <form onsubmit="return validateLogin();">
-    <h3>Login Here</h3>
-
-    <label for="username">Username</label>
-    <input type="text" placeholder="Email or Phone" id="username" autocomplete="username" />
-
-    <label for="password">Password</label>
-    <input type="password" placeholder="Password" id="password" autocomplete="current-password"/>
-
-    <button type="submit">Log In</button>
-    <div class="social">
-      <div class="go"><i class="fab fa-google"></i> Google</div>
-      <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
     </div>
-  </form>
-</body>
+    <form onsubmit="return validateLogin();">
+      <h3>Login Here</h3>
+
+      <label for="username">Username</label>
+      <input
+        type="text"
+        placeholder="Email or Phone"
+        id="username"
+        autocomplete="username"
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Password"
+        id="password"
+        autocomplete="current-password"
+      />
+
+      <button type="submit">Log In</button>
+      <div class="social">
+        <div class="go"><i class="fab fa-google"></i> Google</div>
+        <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+      </div>
+    </form>
+    <script>
+      function validateLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Check if the username and password match a predefined value
+        if (username === "user" && password === "password") {
+          alert("Login successful! Redirecting to the home page.");
+          // Redirect to the home page
+          window.location.href = "/homepage.html";
+        } else {
+          alert("Invalid username or password. Please try again.");
+        }
+
+        // Prevent the form from submitting
+        return false;
+      }
+    </script>
+  </body>
 </html>
